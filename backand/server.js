@@ -1,9 +1,8 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import users from './routes/users.js';
-import posts from './routes/posts.js';
-import comments from './routes/comments.js';
+import products from './routes/products.js';
+
 import cors from 'cors'
 import logger from './middleware/logger.js';
 import errorHandler from './middleware/error.js';
@@ -32,9 +31,8 @@ app.use(logger);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
-app.use('/api/users', users);
-app.use('/api/posts', posts);
-app.use('/api/comments', comments);
+app.use('/api/products', products);
+
 
 // Error handler
 app.use(notFound);
