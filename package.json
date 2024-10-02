@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node --watch --env-file=.env backand/server",
-    "build": "vite build",
+    "dev": "node --watch --env-file=.env backend/server",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "node --env-file=.env backend/server.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
