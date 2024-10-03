@@ -6,6 +6,8 @@ import logger from './middleware/logger.js';
 import errorHandler from './middleware/error.js';
 import notFound from './middleware/notFound.js';
 import connectDB from './database/mongoDB.js';
+import dotenv from "dotenv"
+dotenv.config()
 
 const app = express();
 const port = process.env.PORT || 5000;
